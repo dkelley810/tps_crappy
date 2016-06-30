@@ -77,7 +77,7 @@ function boat.on_rightclick(self, clicker)
 			{x = 0, y = 11, z = -3}, {x = 0, y = 0, z = 0})
 		default.player_attached[name] = true
 		minetest.after(0.2, function()
-			default.player_set_animation(clicker, "sit" , 30)
+			default.player_set_animation(clicker, "lay" , 30) -- sit
 		end)
 		self.object:setyaw(clicker:get_look_yaw() - math.pi / 2)
 	end
@@ -137,15 +137,15 @@ function boat.on_step(self, dtime)
 		end
 		if ctrl.left then
 			if self.v < 0 then
-				self.object:setyaw(yaw - (1 + dtime) * 0.03)
+				self.object:setyaw(yaw - (1 + dtime) * 0.08)
 			else
-				self.object:setyaw(yaw + (1 + dtime) * 0.03)
+				self.object:setyaw(yaw + (1 + dtime) * 0.08)
 			end
 		elseif ctrl.right then
 			if self.v < 0 then
-				self.object:setyaw(yaw + (1 + dtime) * 0.03)
+				self.object:setyaw(yaw + (1 + dtime) * 0.08)
 			else
-				self.object:setyaw(yaw - (1 + dtime) * 0.03)
+				self.object:setyaw(yaw - (1 + dtime) * 0.08) -- 0.03
 			end
 		end
 	end
