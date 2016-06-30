@@ -1,9 +1,5 @@
 -- minetest/wool/init.lua
 
--- Backwards compatibility with jordach's 16-color wool mod
-minetest.register_alias("wool:dark_blue", "wool:blue")
-minetest.register_alias("wool:gold", "wool:yellow")
-
 local wool = {}
 -- This uses a trick: you can first define the recipes using all of the base
 -- colors, and then some recipes using more specific colors for a few non-base
@@ -26,7 +22,7 @@ wool.dyes = {
 	{"dark_green", "Dark Green", "unicolor_dark_green"},
 }
 
-for _, row in ipairs(wool.dyes) do
+for _, row in pairs(wool.dyes) do
 	local name = row[1]
 	local desc = row[2]
 	local craft_color_group = row[3]
@@ -35,16 +31,14 @@ for _, row in ipairs(wool.dyes) do
 		description = desc.." Wool",
 		tiles = {"wool_"..name..".png"},
 		is_ground_content = false,
-		groups = {snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,wool=1},
-		sounds = default.node_sound_defaults(),
+		groups = {choppy=2,oddly_breakable_by_hand=3,flammable=3,wool=1},
+		sounds = default.node_sound_stone_defaults(),
 	})
-	if craft_color_group then
-		-- Crafting from dye and white wool
-		minetest.register_craft({
-			type = "shapeless",
-			output = 'wool:'..name,
-			recipe = {'group:dye,'..craft_color_group, 'group:wool'},
-		})
-	end
+	-- Crafting from dye and white wool
+	minetest.register_craft({
+		type = "shapeless",
+		output = 'wool:'..name,
+		recipe = {'group:dye,'..craft_color_group, 'group:wool'},
+	})
 end
 
