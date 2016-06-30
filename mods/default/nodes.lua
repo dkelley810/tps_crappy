@@ -331,8 +331,8 @@ minetest.register_node("default:dirt", {
 
 minetest.register_node("default:dirt_with_grass", {
 	description = "Dirt with Grass",
-	tiles = {"default_grass.png^[colorize:#015dbb70, "default_dirt.png",
-		{name = "default_dirt.png^default_grass_side.png^[colorize:#015dbb70",
+	tiles = {"default_grass.png^[colorize:#015dbb70", "default_dirt.png",
+		{name = "default_dirt.png^(default_grass_side.png^[colorize:#015dbb70)",
 			tileable_vertical = false}},
 	groups = {crumbly = 3, soil = 1},
 	drop = 'default:dirt',
