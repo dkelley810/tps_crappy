@@ -712,13 +712,6 @@ function doors.register_fencegate(name, def)
 	minetest.register_node(":" .. name .. "_closed", fence_closed)
 	minetest.register_node(":" .. name .. "_open", fence_open)
 
-	minetest.register_craft({
-		output = name .. "_closed",
-		recipe = {
-			{"default:stick", def.material, "default:stick"},
-			{"default:stick", def.material, "default:stick"}
-		}
-	})
 end
 
 doors.register_fencegate("doors:gate_wood", {
@@ -728,11 +721,27 @@ doors.register_fencegate("doors:gate_wood", {
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
+minetest.register_craft({
+	output = "doors:gate_aspen_wood_closed",
+	recipe = {
+		{"default:stick", "default:wood", "default:stick"},
+		{"default:stick", "default:wood", "default:stick"}
+	}
+})
+
 doors.register_fencegate("doors:gate_acacia_wood", {
 	description = "Acacia Fence Gate",
 	texture = "default_acacia_wood.png",
 	material = "default:acacia_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
+})
+
+minetest.register_craft({
+	output = "doors:gate_junglewood_closed",
+	recipe = {
+		{"default:stick", "default:acacia_wood", "default:stick"},
+		{"default:stick", "default:acacia_wood", "default:stick"}
+	}
 })
 
 doors.register_fencegate("doors:gate_junglewood", {
@@ -742,6 +751,14 @@ doors.register_fencegate("doors:gate_junglewood", {
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
+minetest.register_craft({
+	output = "doors:gate_acacia_wood_closed",
+	recipe = {
+		{"default:stick", "default:junglewood", "default:stick"},
+		{"default:stick", "default:junglewood", "default:stick"}
+	}
+})
+
 doors.register_fencegate("doors:gate_pine_wood", {
 	description = "Pine Fence Gate",
 	texture = "default_pine_wood.png",
@@ -749,9 +766,25 @@ doors.register_fencegate("doors:gate_pine_wood", {
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
 })
 
+minetest.register_craft({
+	output = "doors:gate_wood_closed",
+	recipe = {
+		{"default:stick", "default:pine_wood", "default:stick"},
+		{"default:stick", "default:pine_wood", "default:stick"}
+	}
+})
+
 doors.register_fencegate("doors:gate_aspen_wood", {
 	description = "Aspen Fence Gate",
 	texture = "default_aspen_wood.png",
 	material = "default:aspen_wood",
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2}
+})
+
+minetest.register_craft({
+	output = "doors:gate_pine_wood_closed",
+	recipe = {
+		{"default:stick", "default:aspen_wood", "default:stick"},
+		{"default:stick", "default:aspen_wood", "default:stick"}
+	}
 })
