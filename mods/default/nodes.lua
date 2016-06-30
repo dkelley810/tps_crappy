@@ -1137,31 +1137,8 @@ end
 minetest.register_node("default:water_source", {
 	description = "Water Source",
 	drawtype = "liquid",
-	tiles = {
-		{
-			name = "default_water_source_animated.png",
-			animation = {
-				type = "vertical_frames",
-				aspect_w = 16,
-				aspect_h = 16,
-				length = 2.0,
-			},
-		},
-	},
-	special_tiles = {
-		-- New-style water source material (mostly unused)
-		{
-			name = "default_water_source_animated.png",
-			animation = {
-				type = "vertical_frames",
-				aspect_w = 16,
-				aspect_h = 16,
-				length = 2.0,
-			},
-			backface_culling = false,
-		},
-	},
-	alpha = 160,
+	tiles = {"default_wood.png"},
+--	alpha = 160,
 	paramtype = "light",
 	walkable = false,
 	pointable = false,
@@ -1181,30 +1158,8 @@ minetest.register_node("default:water_source", {
 minetest.register_node("default:water_flowing", {
 	description = "Flowing Water",
 	drawtype = "flowingliquid",
-	tiles = {"default_water.png"},
-	special_tiles = {
-		{
-			name = "default_water_flowing_animated.png",
-			backface_culling = false,
-			animation = {
-				type = "vertical_frames",
-				aspect_w = 16,
-				aspect_h = 16,
-				length = 0.8,
-			},
-		},
-		{
-			name = "default_water_flowing_animated.png",
-			backface_culling = true,
-			animation = {
-				type = "vertical_frames",
-				aspect_w = 16,
-				aspect_h = 16,
-				length = 0.8,
-			},
-		},
-	},
-	alpha = 160,
+	tiles = {"default_wood.png"},
+--	alpha = 160,
 	paramtype = "light",
 	paramtype2 = "flowingliquid",
 	walkable = false,
