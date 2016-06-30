@@ -331,8 +331,8 @@ minetest.register_node("default:dirt", {
 
 minetest.register_node("default:dirt_with_grass", {
 	description = "Dirt with Grass",
-	tiles = {"default_grass.png", "default_dirt.png",
-		{name = "default_dirt.png^default_grass_side.png",
+	tiles = {"default_grass.png^[colorize:#015dbb70, "default_dirt.png",
+		{name = "default_dirt.png^default_grass_side.png^[colorize:#015dbb70",
 			tileable_vertical = false}},
 	groups = {crumbly = 3, soil = 1},
 	drop = 'default:dirt',
@@ -1134,10 +1134,22 @@ end
 -- Liquids
 --
 
+
 minetest.register_node("default:water_source", {
 	description = "Water Source",
 	drawtype = "liquid",
-	tiles = {"default_wood.png"},
+	tiles = {
+		{
+			name = "default_wood.png",
+		},
+	},
+	special_tiles = {
+		-- New-style water source material (mostly unused)
+		{
+			name = "default_wood.png",
+			backface_culling = false,
+		},
+	},
 --	alpha = 160,
 	paramtype = "light",
 	walkable = false,
@@ -1159,6 +1171,16 @@ minetest.register_node("default:water_flowing", {
 	description = "Flowing Water",
 	drawtype = "flowingliquid",
 	tiles = {"default_wood.png"},
+	special_tiles = {
+		{
+			name = "default_wood.png",
+			backface_culling = false,
+		},
+		{
+			name = "default_wood.png",
+			backface_culling = true,
+		},
+	},
 --	alpha = 160,
 	paramtype = "light",
 	paramtype2 = "flowingliquid",
@@ -1177,7 +1199,6 @@ minetest.register_node("default:water_flowing", {
 	groups = {water = 3, liquid = 3, puts_out_fire = 1,
 		not_in_creative_inventory = 1},
 })
-
 
 minetest.register_node("default:river_water_source", {
 	description = "River Water Source",
