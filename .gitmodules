@@ -1,0 +1,3 @@
+[submodule "mods/cutepie"]
+	path = mods/cutepie
+	url = https://github.com/DonBatman/cutepie
