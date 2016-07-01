@@ -230,7 +230,7 @@ function default.grow_jungle_tree(pos, bad)
 	local c_air = minetest.get_content_id("air")
 	local c_ignore = minetest.get_content_id("ignore")
 	local c_jungletree = minetest.get_content_id("default:jungletree")
-	local c_jungleleaves = minetest.get_content_id("default:jungleleaves")
+	local c_jungleleaves = minetest.get_content_id("wool:red")
 
 	local vm = minetest.get_voxel_manip()
 	local minp, maxp = vm:read_from_map(
