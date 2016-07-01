@@ -195,7 +195,7 @@ function default.grow_tree(pos, is_apple_tree, bad)
 	local x, y, z = pos.x, pos.y, pos.z
 	local height = random(4, 5)
 	local c_tree = minetest.get_content_id("default:tree")
-	local c_leaves = minetest.get_content_id("default:leaves")
+	local c_leaves = minetest.get_content_id("wool:red")
 
 	local vm = minetest.get_voxel_manip()
 	local minp, maxp = vm:read_from_map(
