@@ -202,6 +202,7 @@ minetest.register_node("default:cobble", {
 	is_ground_content = false,
 	groups = {cracky = 3, stone = 2},
 	sounds = default.node_sound_stone_defaults(),
+	walkable = false,
 })
 
 minetest.register_node("default:stonebrick", {
