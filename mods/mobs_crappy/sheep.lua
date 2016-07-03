@@ -23,7 +23,7 @@ local all_colours = {
 
 for _, col in pairs(all_colours) do
 
-	mobs:register_mob("mobs_animal:sheep_"..col[1], {
+	mobs:register_mob("mobs_crappy:sheep_"..col[1], {
 		type = "animal",
 		passive = true,
 		hp_min = 8,
@@ -147,7 +147,7 @@ for _, col in pairs(all_colours) do
 
 							self.object:remove()
 
-							local mob = minetest.add_entity(pos, "mobs_animal:sheep_" .. colr)
+							local mob = minetest.add_entity(pos, "mobs_crappy:sheep_" .. colr)
 							local ent = mob:get_luaentity()
 
 							ent.owner = name
@@ -172,16 +172,16 @@ for _, col in pairs(all_colours) do
 		end
 	})
 
-	mobs:register_egg("mobs_animal:sheep_"..col[1], col[2] .. " " .. S("Sheep"), "wool_"..col[1]..".png", 1)
+	mobs:register_egg("mobs_crappy:sheep_"..col[1], col[2] .. " " .. S("Sheep"), "wool_"..col[1]..".png", 1)
 
 	-- compatibility
-	mobs:alias_mob("mobs:sheep_" .. col[1], "mobs_animal:sheep_" .. col[1])
+	mobs:alias_mob("mobs:sheep_" .. col[1], "mobs_crappy:sheep_" .. col[1])
 
 end
 
-mobs:register_spawn("mobs_animal:sheep_white",
+mobs:register_spawn("mobs_crappy:sheep_white",
 	{"default:dirt_with_grass", "ethereal:green_dirt"}, 20, 10, 15000, 1, 31000, true)
 
 
 -- compatibility
-mobs:alias_mob("mobs:sheep", "mobs_animal:sheep_white")
+mobs:alias_mob("mobs:sheep", "mobs_crappy:sheep_white")
