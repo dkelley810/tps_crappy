@@ -60,8 +60,8 @@ mobs:register_mob("mobs_crappy:goat", {
 	replace_with = "air",
 })
 -- spawn on default;green;prairie grass between 0 and 20 light, 1 in 20000 chance, 1 goat in area up to 31000 in height
-mobs:register_spawn("mr_goat:goat", {"default:dirt_with_grass", "ethereal:green_dirt_top"}, 20, 0, 20000, 1, 31000)
+mobs:register_spawn("mobs_crappy:goat", {"default:dirt_with_grass", "ethereal:green_dirt_top"}, 20, 0, 20000, 1, 31000)
 -- register spawn egg
-mobs:register_egg("mr_goat:goat", "Goat", "default_grass.png", 1)
+mobs:register_egg("mobs_crappy:goat", "Goat", "default_grass.png", 1)
 
 end
