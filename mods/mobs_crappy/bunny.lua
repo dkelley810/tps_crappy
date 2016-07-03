@@ -3,7 +3,7 @@ local S = mobs.intllib
 
 -- Bunny by ExeterDad
 
-mobs:register_mob("mobs_animal:bunny", {
+mobs:register_mob("mobs_crappy:bunny", {
 	type = "animal",
 	passive = true,
 	reach = 1,
@@ -82,10 +82,10 @@ mobs:register_mob("mobs_animal:bunny", {
 	damage = 5,
 })
 
-mobs:register_spawn("mobs_animal:bunny",
+mobs:register_spawn("mobs_crappy:bunny",
 	{"default:dirt_with_grass", "ethereal:prairie_dirt"}, 20, 10, 15000, 2, 31000, true)
 
-mobs:register_egg("mobs_animal:bunny", S("Bunny"), "mobs_bunny_inv.png", 0)
+mobs:register_egg("mobs_crappy:bunny", S("Bunny"), "mobs_bunny_inv.png", 0)
 
 -- compatibility
-mobs:alias_mob("mobs:bunny", "mobs_animal:bunny")
+mobs:alias_mob("mobs:bunny", "mobs_crappy:bunny")
