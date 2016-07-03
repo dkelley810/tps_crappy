@@ -3,7 +3,7 @@ local S = mobs.intllib
 
 -- Kitten by Jordach / BFD
 
-mobs:register_mob("mobs_animal:kitten", {
+mobs:register_mob("mobs_crappy:kitten", {
 	type = "animal",
 	passive = true,
 	hp_min = 5,
@@ -41,7 +41,7 @@ mobs:register_mob("mobs_animal:kitten", {
 		walk_start = 0,
 		walk_end = 96,
 	},
-	follow = {"mobs_animal:rat", "ethereal:fish_raw", "mobs_fish:clownfish", "mobs_fish:tropical"},
+	follow = {"mobs_crappy:rat", "ethereal:fish_raw", "mobs_fish:clownfish", "mobs_fish:tropical"},
 	view_range = 8,
 	on_rightclick = function(self, clicker)
 
@@ -53,10 +53,10 @@ mobs:register_mob("mobs_animal:kitten", {
 	end
 })
 
-mobs:register_spawn("mobs_animal:kitten",
+mobs:register_spawn("mobs_crappy:kitten",
 	{"default:dirt_with_grass", "ethereal:grove_dirt"}, 20, 12, 22000, 1, 31000, true)
 
-mobs:register_egg("mobs_animal:kitten", S("Kitten"), "mobs_kitten_inv.png", 0)
+mobs:register_egg("mobs_crappy:kitten", S("Kitten"), "mobs_kitten_inv.png", 0)
 
 -- compatibility
-mobs:alias_mob("mobs:kitten", "mobs_animal:kitten")
+mobs:alias_mob("mobs:kitten", "mobs_crappy:kitten")
