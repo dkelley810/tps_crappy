@@ -3,7 +3,7 @@
 
 if mobs.mod and mobs.mod == "redo" then
 
-mobs:register_mob("mobs:goat", {
+mobs:register_mob("mobs_crappy:goat", {
 	-- animal, monster, npc, barbarian
 	type = "animal",
 	-- aggressive, does 4 damage to player when threatened
