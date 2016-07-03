@@ -3,7 +3,7 @@ local S = mobs.intllib
 
 -- Cow by Krupnovpavel (additional texture by JurajVajda)
 
-mobs:register_mob("mobs_animal:cow", {
+mobs:register_mob("mobs_crappy:cow", {
 	type = "animal",
 	passive = false,
 	attack_type = "dogfight",
@@ -96,13 +96,13 @@ mobs:register_mob("mobs_animal:cow", {
 	end,
 })
 
-mobs:register_spawn("mobs_animal:cow",
+mobs:register_spawn("mobs_crappy:cow",
 	{"default:dirt_with_grass", "ethereal:green_dirt"}, 20, 10, 15000, 1, 31000, true)
 
-mobs:register_egg("mobs_animal:cow", S("Cow"), "default_grass.png", 1)
+mobs:register_egg("mobs_crappy:cow", S("Cow"), "default_grass.png", 1)
 
 -- compatibility
-mobs:alias_mob("mobs:cow", "mobs_animal:cow")
+mobs:alias_mob("mobs:cow", "mobs_crappy:cow")
 
 -- bucket of milk
 minetest.register_craftitem(":mobs:bucket_milk", {
