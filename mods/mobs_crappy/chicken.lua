@@ -3,7 +3,7 @@ local S = mobs.intllib
 
 -- Chicken by JK Murray
 
-mobs:register_mob("mobs_animal:chicken", {
+mobs:register_mob("mobs_crappy:chicken", {
 	type = "animal",
 	passive = true,
 	hp_min = 5,
@@ -80,17 +80,17 @@ mobs:register_mob("mobs_animal:chicken", {
 	end,
 })
 
-mobs:register_spawn("mobs_animal:chicken",
+mobs:register_spawn("mobs_crappy:chicken",
 	{"default:dirt_with_grass", "ethereal:bamboo_dirt"}, 20, 10, 15000, 1, 31000, true)
 
-mobs:register_egg("mobs_animal:chicken", S("Chicken"), "mobs_chicken_inv.png", 0)
+mobs:register_egg("mobs_crappy:chicken", S("Chicken"), "mobs_chicken_inv.png", 0)
 
 -- compatibility
-mobs:alias_mob("mobs:chicken", "mobs_animal:chicken")
+mobs:alias_mob("mobs:chicken", "mobs_crappy:chicken")
 
 -- egg entity
 
-mobs:register_arrow("mobs_animal:egg_entity", {
+mobs:register_arrow("mobs_crappy:egg_entity", {
 	visual = "sprite",
 	visual_size = {x=.5, y=.5},
 	textures = {"mobs_chicken_egg.png"},
@@ -126,7 +126,7 @@ mobs:register_arrow("mobs_animal:egg_entity", {
 				return
 			end
 
-			local mob = minetest.add_entity(pos, "mobs_animal:chicken")
+			local mob = minetest.add_entity(pos, "mobs_crappy:chicken")
 			local ent2 = mob:get_luaentity()
 
 			mob:set_properties({
@@ -172,7 +172,7 @@ local mobs_shoot_egg = function (item, player, pointed_thing)
 		x = playerpos.x,
 		y = playerpos.y +1.5,
 		z = playerpos.z
-	}, "mobs_animal:egg_entity")
+	}, "mobs_crappy:egg_entity")
 
 	local ent = obj:get_luaentity()
 	local dir = player:get_look_dir()
